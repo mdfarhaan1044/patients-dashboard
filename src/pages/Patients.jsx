@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PatientCard from "../components/PatientCard";
+import PatientCard from "../components/PatientCardd";
 import patientsData from "../data/patients.json";
 import PatientModel from "../components/PatientModel";
 
