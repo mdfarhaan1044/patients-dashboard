@@ -1,5 +1,11 @@
+import PatientCard from "./components/patientCard";
+
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <PatientCard />
+    </div>
+  );
 }
 
 export default App;

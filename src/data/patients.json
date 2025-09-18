@@ -1,0 +1,416 @@
+[
+    {
+      "patient_id": "P001",
+      "name": {
+        "first_name": "John",
+        "last_name": "Doe"
+      },
+      "contact": {
+        "phone": "555-123-4567",
+        "email": "john.doe@email.com",
+        "address": {
+          "street": "123 Main St",
+          "city": "Anytown",
+          "state": "CA",
+          "zip_code": "12345"
+        }
+      },
+      "dob": "1990-05-15",
+      "gender": "Male",
+      "medical_history": [
+        {
+          "condition": "Hypertension",
+          "diagnosis_date": "2018-03-10"
+        },
+        {
+          "condition": "Type 2 Diabetes",
+          "diagnosis_date": "2020-01-20"
+        },
+        {
+          "condition": "Acute Myocardial Infarction",
+          "admission_date": "2024-04-10",
+          "discharge_date": "2024-04-15"
+        }
+      ],
+      "allergies": [
+        "Penicillin",
+        "Sulfa drugs"
+      ],
+      "current_medications": [
+        {
+          "medication_name": "Lisinopril",
+          "dosage": "10mg",
+          "frequency": "Once daily"
+        },
+        {
+          "medication_name": "Metformin",
+          "dosage": "500mg",
+          "frequency": "Twice daily"
+        },
+        {
+          "medication_name": "Aspirin",
+          "dosage": "81mg",
+          "frequency": "Once daily"
+        }
+      ]
+    },
+    {
+      "patient_id": "P002",
+      "name": {
+        "first_name": "Jane",
+        "last_name": "Smith"
+      },
+      "contact": {
+        "phone": "555-987-6543",
+        "email": "jane.smith@email.com",
+        "address": {
+          "street": "456 Oak Ave",
+          "city": "Somewhere",
+          "state": "NY",
+          "zip_code": "67890"
+        }
+      },
+      "dob": "1985-11-22",
+      "gender": "Female",
+      "medical_history": [
+        {
+          "condition": "Asthma",
+          "diagnosis_date": "2005-07-12"
+        },
+        {
+          "condition": "Pneumonia",
+          "admission_date": "2023-11-01",
+          "discharge_date": "2023-11-08"
+        }
+      ],
+      "allergies": [
+        "Dust mites"
+      ],
+      "current_medications": [
+        {
+          "medication_name": "Albuterol",
+          "dosage": "2 puffs",
+          "frequency": "As needed"
+        },
+        {
+          "medication_name": "Prednisone",
+          "dosage": "20mg",
+          "frequency": "Once daily"
+        }
+      ]
+    },
+    {
+      "patient_id": "P003",
+      "name": {
+        "first_name": "Robert",
+        "last_name": "Johnson"
+      },
+      "contact": {
+        "phone": "555-222-3333",
+        "email": "robert.j@email.com",
+        "address": {
+          "street": "789 Pine Ln",
+          "city": "Villagetown",
+          "state": "TX",
+          "zip_code": "54321"
+        }
+      },
+      "dob": "1972-03-08",
+      "gender": "Male",
+      "medical_history": [
+        {
+          "condition": "Chronic Back Pain",
+          "diagnosis_date": "2015-09-01"
+        },
+        {
+          "condition": "Lumbar Herniated Disc",
+          "admission_date": "2022-07-20",
+          "discharge_date": "2022-07-25"
+        }
+      ],
+      "allergies": [],
+      "current_medications": [
+        {
+          "medication_name": "Ibuprofen",
+          "dosage": "600mg",
+          "frequency": "Three times daily"
+        },
+        {
+          "medication_name": "Cyclobenzaprine",
+          "dosage": "10mg",
+          "frequency": "Twice daily"
+        }
+      ]
+    },
+    {
+      "patient_id": "P004",
+      "name": {
+        "first_name": "Emily",
+        "last_name": "Davis"
+      },
+      "contact": {
+        "phone": "555-444-5555",
+        "email": "emily.d@email.com",
+        "address": {
+          "street": "101 Maple Rd",
+          "city": "Cityburg",
+          "state": "FL",
+          "zip_code": "98765"
+        }
+      },
+      "dob": "1995-10-30",
+      "gender": "Female",
+      "medical_history": [
+        {
+          "condition": "Anemia",
+          "diagnosis_date": "2021-02-14"
+        },
+        {
+          "condition": "Severe Dehydration",
+          "admission_date": "2023-05-18",
+          "discharge_date": "2023-05-20"
+        }
+      ],
+      "allergies": [
+        "Latex"
+      ],
+      "current_medications": [
+        {
+          "medication_name": "Iron supplements",
+          "dosage": "325mg",
+          "frequency": "Once daily"
+        }
+      ]
+    },
+    {
+      "patient_id": "P005",
+      "name": {
+        "first_name": "Michael",
+        "last_name": "Brown"
+      },
+      "contact": {
+        "phone": "555-666-7777",
+        "email": "michael.b@email.com",
+        "address": {
+          "street": "222 Birch St",
+          "city": "Townsville",
+          "state": "WA",
+          "zip_code": "23456"
+        }
+      },
+      "dob": "1968-08-05",
+      "gender": "Male",
+      "medical_history": [
+        {
+          "condition": "High Cholesterol",
+          "diagnosis_date": "2010-04-25"
+        },
+        {
+          "condition": "Coronary Artery Disease",
+          "admission_date": "2021-09-02",
+          "discharge_date": "2021-09-07"
+        }
+      ],
+      "allergies": [
+        "Shellfish"
+      ],
+      "current_medications": [
+        {
+          "medication_name": "Atorvastatin",
+          "dosage": "20mg",
+          "frequency": "Once daily"
+        },
+        {
+          "medication_name": "Clopidogrel",
+          "dosage": "75mg",
+          "frequency": "Once daily"
+        }
+      ]
+    },
+    {
+      "patient_id": "P006",
+      "name": {
+        "first_name": "Jessica",
+        "last_name": "Wilson"
+      },
+      "contact": {
+        "phone": "555-888-9999",
+        "email": "jessica.w@email.com",
+        "address": {
+          "street": "333 Cedar Dr",
+          "city": "Hilltop",
+          "state": "GA",
+          "zip_code": "87654"
+        }
+      },
+      "dob": "1992-02-18",
+      "gender": "Female",
+      "medical_history": [
+        {
+          "condition": "Acute Appendicitis",
+          "admission_date": "2024-01-20",
+          "discharge_date": "2024-01-22"
+        }
+      ],
+      "allergies": [],
+      "current_medications": [
+        {
+          "medication_name": "Morphine",
+          "dosage": "4mg",
+          "frequency": "As needed (post-op)"
+        }
+      ]
+    },
+    {
+      "patient_id": "P007",
+      "name": {
+        "first_name": "Christopher",
+        "last_name": "Taylor"
+      },
+      "contact": {
+        "phone": "555-111-2222",
+        "email": "chris.t@email.com",
+        "address": {
+          "street": "444 Elm Ct",
+          "city": "Riverside",
+          "state": "AZ",
+          "zip_code": "43210"
+        }
+      },
+      "dob": "1975-06-21",
+      "gender": "Male",
+      "medical_history": [
+        {
+          "condition": "Gout",
+          "diagnosis_date": "2019-11-05"
+        },
+        {
+          "condition": "Kidney Stones",
+          "admission_date": "2023-03-10",
+          "discharge_date": "2023-03-12"
+        }
+      ],
+      "allergies": [],
+      "current_medications": [
+        {
+          "medication_name": "Allopurinol",
+          "dosage": "300mg",
+          "frequency": "Once daily"
+        }
+      ]
+    },
+    {
+      "patient_id": "P008",
+      "name": {
+        "first_name": "Ashley",
+        "last_name": "Moore"
+      },
+      "contact": {
+        "phone": "555-333-4444",
+        "email": "ashley.m@email.com",
+        "address": {
+          "street": "555 Aspen Way",
+          "city": "Lakeside",
+          "state": "CO",
+          "zip_code": "34567"
+        }
+      },
+      "dob": "1988-09-09",
+      "gender": "Female",
+      "medical_history": [
+        {
+          "condition": "Migraines",
+          "diagnosis_date": "2017-08-15"
+        },
+        {
+          "condition": "Status Migrainosus",
+          "admission_date": "2022-09-25",
+          "discharge_date": "2022-09-28"
+        }
+      ],
+      "allergies": [
+        "Codeine"
+      ],
+      "current_medications": [
+        {
+          "medication_name": "Sumatriptan",
+          "dosage": "50mg",
+          "frequency": "As needed"
+        }
+      ]
+    },
+    {
+      "patient_id": "P009",
+      "name": {
+        "first_name": "Matthew",
+        "last_name": "Hall"
+      },
+      "contact": {
+        "phone": "555-555-6666",
+        "email": "matt.h@email.com",
+        "address": {
+          "street": "666 Pine St",
+          "city": "Forestville",
+          "state": "OR",
+          "zip_code": "76543"
+        }
+      },
+      "dob": "1965-01-28",
+      "gender": "Male",
+      "medical_history": [
+        {
+          "condition": "Osteoarthritis",
+          "diagnosis_date": "2012-10-10"
+        },
+        {
+          "condition": "Total Knee Replacement",
+          "admission_date": "2023-02-15",
+          "discharge_date": "2023-02-18"
+        }
+      ],
+      "allergies": [],
+      "current_medications": [
+        {
+          "medication_name": "Naproxen",
+          "dosage": "500mg",
+          "frequency": "Twice daily"
+        }
+      ]
+    },
+    {
+      "patient_id": "P010",
+      "name": {
+        "first_name": "Olivia",
+        "last_name": "King"
+      },
+      "contact": {
+        "phone": "555-777-8888",
+        "email": "olivia.k@email.com",
+        "address": {
+          "street": "777 Walnut Ave",
+          "city": "Seaside",
+          "state": "CA",
+          "zip_code": "90123"
+        }
+      },
+      "dob": "2000-04-03",
+      "gender": "Female",
+      "medical_history": [
+        {
+          "condition": "Allergic Reaction",
+          "admission_date": "2024-06-01",
+          "discharge_date": "2024-06-02"
+        }
+      ],
+      "allergies": [
+        "Bees"
+      ],
+      "current_medications": [
+        {
+          "medication_name": "Epinephrine",
+          "dosage": "0.3mg",
+          "frequency": "As needed (EpiPen)"
+        }
+      ]
+    }
+  ]
