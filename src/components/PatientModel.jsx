@@ -1,18 +1,22 @@
 import React, { useEffect } from "react";
 
 function PatientModel({ patient, onClose }) {
-  if (!patient) return null;
-
   useEffect(() => {
     document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, []);
 
   const handleBackdropClick = (e) => {
     if (e.target.id === "modal-backdrop") {
       onClose();
-      document.body.style.overflow = "auto";
     }
   };
+
+  if (!patient) return null;
+
   return (
     <div
       id="modal-backdrop"
@@ -59,10 +63,7 @@ function PatientModel({ patient, onClose }) {
 
         <button
           className="bg-amber-600 text-white p-2 rounded-lg m-4 cursor-pointer"
-          onClick={() => {
-            onClose();
-            document.body.style.overflow = "auto";
-          }}
+          onClick={onClose}
         >
           Close
         </button>
