@@ -1,11 +1,15 @@
-import React, { useState } from "react";
-import PatientCard from "../components/PatientCardd";
-import patientsData from "../data/patients.json";
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import PatientCard from "../components/PatientCards";
 import PatientModel from "../components/PatientModel";
+import { selectPatient, clearSelectedPatient } from "../slices/patientsSlice";
 
 function Patients() {
-  const [patients] = useState(patientsData);
-  const [selectedPatient, setSelectedPatient] = useState(null);
+  const dispatch = useDispatch();
+  const patients = useSelector((state) => state.patients.list);
+  const selectedPatient = useSelector(
+    (state) => state.patients.selectedPatient
+  );
 
   return (
     <div className="">
@@ -14,14 +18,14 @@ function Patients() {
           <PatientCard
             key={patient.patient_id}
             patient={patient}
-            setSelectedPatient={setSelectedPatient}
+            setSelectedPatient={(p) => dispatch(selectPatient(p))}
           />
         ))}
       </div>
       {selectedPatient && (
         <PatientModel
           patient={selectedPatient}
-          onClose={() => setSelectedPatient(null)}
+          onClose={() => dispatch(clearSelectedPatient())}
         />
       )}
     </div>

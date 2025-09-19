@@ -1,6 +1,10 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { selectPatient } from "../slices/patientsSlice";
 
-function PatientCard({ patient, setSelectedPatient }) {
+function PatientCard({ patient }) {
+  const dispatch = useDispatch();
+
   return (
     <div
       className="border border-amber-600 p-4 m-4 rounded-lg justify-center items-center flex flex-col"
@@ -18,7 +22,7 @@ function PatientCard({ patient, setSelectedPatient }) {
       </p>
       <button
         className="bg-amber-600 text-white p-2 rounded-lg m-4 cursor-pointer"
-        onClick={() => setSelectedPatient(patient)}
+        onClick={() => dispatch(selectPatient(patient))}
       >
         View Details
       </button>

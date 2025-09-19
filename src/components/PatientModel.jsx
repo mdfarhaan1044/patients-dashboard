@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { clearSelectedPatient } from "../slices/patientsSlice";
 
-function PatientModel({ patient, onClose }) {
+function PatientModel({ patient }) {
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
@@ -9,9 +11,11 @@ function PatientModel({ patient, onClose }) {
     };
   }, []);
 
+  const dispatch = useDispatch();
+
   const handleBackdropClick = (e) => {
     if (e.target.id === "modal-backdrop") {
-      onClose();
+      dispatch(clearSelectedPatient());
     }
   };
 
@@ -63,7 +67,7 @@ function PatientModel({ patient, onClose }) {
 
         <button
           className="bg-amber-600 text-white p-2 rounded-lg m-4 cursor-pointer"
-          onClick={onClose}
+          onClick={() => dispatch(clearSelectedPatient())}
         >
           Close
         </button>
