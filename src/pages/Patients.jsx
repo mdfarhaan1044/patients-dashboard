@@ -3,12 +3,13 @@ import { useSelector, useDispatch } from "react-redux";
 import PatientCard from "../components/PatientCards";
 import PatientModel from "../components/PatientModel";
 import { selectPatient, clearSelectedPatient } from "../slices/patientsSlice";
+import { Link } from "react-router-dom";
 
 function Patients() {
   const dispatch = useDispatch();
-  const patients = useSelector((state) => state.patients.list);
-  const selectedPatient = useSelector(
-    (state) => state.patients.selectedPatient
+
+  const { list: patients, selectedPatient } = useSelector(
+    (state) => state.patients
   );
 
   return (

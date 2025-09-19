@@ -25,12 +25,12 @@ function PatientModel({ patient }) {
     <div
       id="modal-backdrop"
       className="fixed inset-0 flex items-center justify-center 
-             bg-white/30 backdrop-blur-sm z-50"
+             bg-black/40 backdrop-blur-sm z-50"
       onClick={handleBackdropClick}
     >
       <div
         className="bg-gradient-to-br from-blue-50 to-blue-100 w-11/12 md:w-2/3 lg:w-1/2 p-6 rounded-xl shadow-lg relative 
-               overflow-y-auto max-h-[80vh]"
+               overflow-y-auto max-h-[80vh] hide-scrollbar"
       >
         {/* Patient Name */}
         <h2 className="text-2xl font-bold text-blue-700 mb-4 text-center">
@@ -46,53 +46,46 @@ function PatientModel({ patient }) {
         </p>
 
         {/* Allergies */}
-        <div className="mb-4">
-          <strong className="block text-lg text-green-600">Allergies:</strong>
-          <ul className="list-disc list-inside text-gray-700">
-            {patient.allergies && patient.allergies.length > 0 ? (
-              patient.allergies.map((item, index) => (
+        {patient.allergies && patient.allergies.length > 0 && (
+          <div className="mb-4">
+            <strong className="block text-lg text-green-600">Allergies:</strong>
+            <ul className="list-disc list-inside text-gray-700">
+              {patient.allergies.map((item, index) => (
                 <li key={index}>{item}</li>
-              ))
-            ) : (
-              <li>None</li>
-            )}
-          </ul>
-        </div>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Medical History */}
-        <div className="mb-4">
-          <strong className="block text-lg text-green-600">
-            Medical History:
-          </strong>
-          <ul className="list-disc list-inside text-gray-700">
-            {patient.medical_history && patient.medical_history.length > 0 ? (
-              patient.medical_history.map((item, index) => (
+        {patient.medical_history && patient.medical_history.length > 0 && (
+          <div className="mb-4">
+            <strong className="block text-lg text-green-600">
+              Medical History:
+            </strong>
+            <ul className="list-disc list-inside text-gray-700">
+              {patient.medical_history.map((item, index) => (
                 <li key={index}>{item.condition}</li>
-              ))
-            ) : (
-              <li>None</li>
-            )}
-          </ul>
-        </div>
-
+              ))}
+            </ul>
+          </div>
+        )}
         {/* Current Medications */}
-        <div className="mb-6">
-          <strong className="block text-lg text-green-600">
-            Current Medications:
-          </strong>
-          <ul className="list-disc list-inside text-gray-700">
-            {patient.current_medications &&
-            patient.current_medications.length > 0 ? (
-              patient.current_medications.map((item, index) => (
-                <li key={index}>
-                  {item.medication_name} ({item.dosage}) – {item.frequency}
-                </li>
-              ))
-            ) : (
-              <li>None</li>
-            )}
-          </ul>
-        </div>
+        {patient.current_medications &&
+          patient.current_medications.length > 0 && (
+            <div className="mb-6">
+              <strong className="block text-lg text-green-600">
+                Current Medications:
+              </strong>
+              <ul className="list-disc list-inside text-gray-700">
+                {patient.current_medications.map((item, index) => (
+                  <li key={index}>
+                    {item.medication_name} ({item.dosage}) – {item.frequency}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
         {/* Close Button */}
         <button

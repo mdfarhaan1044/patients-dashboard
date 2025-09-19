@@ -8,7 +8,6 @@ function Home() {
       <h1 className="text-4xl md:text-5xl font-bold text-blue-600 text-center mb-6">
         Welcome to Jarurat Care
       </h1>
-
       {/* Description */}
       <p className="text-gray-700 text-center text-lg md:text-xl max-w-2xl mb-6">
         Jarurat Care is a modern healthcare platform that helps you manage
@@ -16,7 +15,6 @@ function Home() {
         access to patient history, our dashboard makes healthcare management
         simple and effective.
       </p>
-
       {/* Features */}
       <div className="text-gray-800 mb-6 max-w-2xl">
         <h2 className="text-2xl font-semibold mb-2">Features</h2>
@@ -35,14 +33,14 @@ function Home() {
           </li>
         </ul>
       </div>
-
-      {/* Button */}
-      <Link
-        to="/patients"
-        className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-lg transition"
-      >
-        View All Patients
-      </Link>
+      <div className="flex gap-4">
+        <Link
+          to="/patients"
+          className="bg-green-500 hover:bg-green-600 text-white font-semibold p-4 rounded-lg transition"
+        >
+          View Patients
+        </Link>
+      </div>
     </div>
   );
 }
