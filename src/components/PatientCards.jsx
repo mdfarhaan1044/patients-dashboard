@@ -7,21 +7,26 @@ function PatientCard({ patient }) {
 
   return (
     <div
-      className="border border-amber-600 p-4 m-4 rounded-lg justify-center items-center flex flex-col"
       key={patient.patient_id}
+      className="border border-green-500 bg-white p-6 rounded-xl shadow-sm flex flex-col items-center text-center hover:shadow-md transition"
     >
-      <h2 className="text-2xl font-bold">
+      {/* Name */}
+      <h2 className="text-xl font-bold text-blue-700 mb-2">
         {patient.name.first_name} {patient.name.last_name}
       </h2>
-      <p>{patient.contact.phone}</p>
-      <p>{patient.contact.email}</p>
-      <p>{patient.contact.address.street}</p>
-      <p>
+
+      {/* Contact */}
+      <p className="text-gray-700">{patient.contact.phone}</p>
+      <p className="text-gray-700">{patient.contact.email}</p>
+      <p className="text-gray-700">{patient.contact.address.street}</p>
+      <p className="text-gray-700">
         {patient.contact.address.city}, {patient.contact.address.state}{" "}
         {patient.contact.address.zip_code}
       </p>
+
+      {/* Button */}
       <button
-        className="bg-amber-600 text-white p-2 rounded-lg m-4 cursor-pointer"
+        className="mt-4 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-5 rounded-lg cursor-pointer transition"
         onClick={() => dispatch(selectPatient(patient))}
       >
         View Details

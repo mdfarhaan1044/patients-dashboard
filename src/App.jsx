@@ -7,13 +7,17 @@ import Patients from "./pages/Patients";
 function App() {
   return (
     <Router>
-      <Header />
+      <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 to-blue-100">
+        <Header />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/patients" element={<Patients />} />
-      </Routes>
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/patients" element={<Patients />} />
+          </Routes>
+        </main>
+      </div>
     </Router>
   );
 }

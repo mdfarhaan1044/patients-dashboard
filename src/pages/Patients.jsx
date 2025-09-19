@@ -12,8 +12,14 @@ function Patients() {
   );
 
   return (
-    <div className="">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6">
+      {/* Title */}
+      <h1 className="text-3xl font-bold text-center mb-6 text-blue-600">
+        Patient Records
+      </h1>
+
+      {/* Patient Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {patients.map((patient) => (
           <PatientCard
             key={patient.patient_id}
@@ -22,6 +28,8 @@ function Patients() {
           />
         ))}
       </div>
+
+      {/* Modal for patient details */}
       {selectedPatient && (
         <PatientModel
           patient={selectedPatient}

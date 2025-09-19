@@ -24,49 +24,79 @@ function PatientModel({ patient }) {
   return (
     <div
       id="modal-backdrop"
-      className="fixed inset-0 flex items-center justify-center bg-blur bg-opacity-50"
+      className="fixed inset-0 flex items-center justify-center 
+             bg-white/30 backdrop-blur-sm z-50"
       onClick={handleBackdropClick}
     >
-      <div className="bg-gray-200 p-4 rounded-lg">
-        <h2 className="text-2xl font-bold justify-center items-center">
+      <div
+        className="bg-gradient-to-br from-blue-50 to-blue-100 w-11/12 md:w-2/3 lg:w-1/2 p-6 rounded-xl shadow-lg relative 
+               overflow-y-auto max-h-[80vh]"
+      >
+        {/* Patient Name */}
+        <h2 className="text-2xl font-bold text-blue-700 mb-4 text-center">
           {patient.name.first_name} {patient.name.last_name}
         </h2>
-        <p>{"Date of Birth: " + patient.dob}</p>
-        <p>{"Gender: " + patient.gender}</p>
-        <strong>Allergies:</strong>
-        <ul className="list-disc list-inside">
-          {patient.allergies && patient.allergies.length > 0 ? (
-            patient.allergies.map((item, index) => <li key={index}>{item}</li>)
-          ) : (
-            <li>None</li>
-          )}
-        </ul>
-        <strong>Medical History:</strong>
-        <ul className="list-disc list-inside">
-          {patient.medical_history && patient.medical_history.length > 0
-            ? patient.medical_history.map((item, index) => (
+
+        {/* Basic Info */}
+        <p className="text-gray-700 mb-1">
+          <strong>Date of Birth:</strong> {patient.dob}
+        </p>
+        <p className="text-gray-700 mb-4">
+          <strong>Gender:</strong> {patient.gender}
+        </p>
+
+        {/* Allergies */}
+        <div className="mb-4">
+          <strong className="block text-lg text-green-600">Allergies:</strong>
+          <ul className="list-disc list-inside text-gray-700">
+            {patient.allergies && patient.allergies.length > 0 ? (
+              patient.allergies.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))
+            ) : (
+              <li>None</li>
+            )}
+          </ul>
+        </div>
+
+        {/* Medical History */}
+        <div className="mb-4">
+          <strong className="block text-lg text-green-600">
+            Medical History:
+          </strong>
+          <ul className="list-disc list-inside text-gray-700">
+            {patient.medical_history && patient.medical_history.length > 0 ? (
+              patient.medical_history.map((item, index) => (
                 <li key={index}>{item.condition}</li>
               ))
-            : "None"}
-        </ul>
-        <strong>Current Medications:</strong>
-        <ul className="list-disc list-inside">
-          {patient.current_medications && patient.current_medications.length > 0
-            ? patient.current_medications.map((item, index) => (
+            ) : (
+              <li>None</li>
+            )}
+          </ul>
+        </div>
+
+        {/* Current Medications */}
+        <div className="mb-6">
+          <strong className="block text-lg text-green-600">
+            Current Medications:
+          </strong>
+          <ul className="list-disc list-inside text-gray-700">
+            {patient.current_medications &&
+            patient.current_medications.length > 0 ? (
+              patient.current_medications.map((item, index) => (
                 <li key={index}>
-                  {"The patient should take " +
-                    item.medication_name +
-                    " (" +
-                    item.dosage +
-                    ") medicine with frequency of " +
-                    item.frequency}
+                  {item.medication_name} ({item.dosage}) – {item.frequency}
                 </li>
               ))
-            : "None"}
-        </ul>
+            ) : (
+              <li>None</li>
+            )}
+          </ul>
+        </div>
 
+        {/* Close Button */}
         <button
-          className="bg-amber-600 text-white p-2 rounded-lg m-4 cursor-pointer"
+          className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg block mx-auto"
           onClick={() => dispatch(clearSelectedPatient())}
         >
           Close
